@@ -1,0 +1,18 @@
+@ChatUygulamasıBackend_HostAddress = http://localhost:5171
+
+### Belirli bir kullanıcıya ait mesaj geçmişini getir
+GET {{ChatUygulamasıBackend_HostAddress}}/api/messages/user123
+Accept: application/json
+
+### Belirli bir kullanıcıya ait bilgileri getir
+GET {{ChatUygulamasıBackend_HostAddress}}/api/user/user123
+Accept: application/json
+
+### Yeni bir mesaj gönder
+POST {{ChatUygulamasıBackend_HostAddress}}/api/messages
+Content-Type: application/json
+{
+  "senderId": "user123",
+  "receiverId": "user456",
+  "content": "Merhaba, nasılsın?"
+}
